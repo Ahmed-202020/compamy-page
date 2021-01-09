@@ -1,0 +1,574 @@
+@font-face {
+    font-family: ar-font;
+    src: url(../fonts/Cairo/Cairo-Regular.ttf);
+}
+
+body {
+    font-family: ar-font;
+    direction: rtl;
+}
+
+header {
+    background-image: url(../images/bg.jpg);
+    background-size: cover;
+    background-position: center center;
+    min-height: 100vh;
+}
+
+header .overlay {
+    background: linear-gradient(to right, rgba(37, 143, 145, 0.8)0%, rgba(123, 112, 41, 0.8)100%);
+    height: 100vh;
+}
+
+nav ul.navbar-nav {
+    padding-right: 0;
+}
+
+nav ul.navbar-nav li a.nav-link {
+    font-size: 16px;
+    color: #e8e8e8;
+    padding-right: 1.5rem !important;
+    padding-left: 1.5rem !important;
+    line-height: 48px;
+    transition: all .5s ease;
+}
+
+nav ul.navbar-nav li a.nav-link:hover, nav ul.navbar-nav li a.nav-link.active {
+    color: #16aeca;
+    background-color: #ffffff;
+}
+
+nav.navbar.noTransparrent ul.navbar-nav li a.nav-link {
+    color: #16aeca;
+}
+
+nav.navbar.noTransparrent ul.navbar-nav li a.nav-link:hover, nav.navbar.noTransparrent ul.navbar-nav li a.nav-link.active {
+    color: #dae413;
+    background-color: #16aeca;
+}
+
+nav.navbar.noTransparrent .navbar-brand img {
+    width: 80%;
+}
+
+nav.navbar.noTransparrent {
+    background-color: #ffffff;
+    border-bottom: 1px solid #eee;
+}
+
+nav.navbar button.navbar-toggler {
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+nav.navbar button.navbar-toggler span {
+    color: #ffffff;
+}
+
+nav.navbar.noTransparrent button.navbar-toggler span {
+    color: #16aeca;
+}
+
+@media (max-width: 992px) {
+    nav.navbar .container {
+        max-width: 100%;
+        flex-direction: row-reverse;
+    }
+    .navbar .navbar-toggler {
+        outline: none;
+        margin: 0 !important;
+    }
+    .navbar .navbar-toggler span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    nav.navbar .navbar-brand img {
+        width: 80%;
+    }
+}
+
+header .overlay .slider .carousel-inner .carousel-item {
+    min-height: 100vh;
+    opacity: 0;
+}
+
+header .overlay .slider .carousel-inner .carousel-item.active {
+    opacity: 1;
+}
+
+header .overlay .slider .carousel-inner .carousel-item.active .carousel-caption {
+    opacity: 1;
+}
+
+header .overlay .slider .carousel-inner .carousel-item .carousel-caption h3 {
+    color: #ffffff;
+    font-size: 40px;
+    line-height: 60px;
+    transform: translateY(-50px);
+    transition: all 1s ease;
+}
+
+header .overlay .slider .carousel-inner .carousel-item .carousel-caption {
+    bottom: 30%;
+}
+
+header .overlay .slider .carousel-inner .carousel-item .carousel-caption a {
+    font-size: 18px;
+    color: #ffffff;
+    background-color: #16aeca;
+    padding: 0px 32px;
+    border-radius: 30px;
+    line-height: 50px;
+    margin-top: 30px;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    transform: translateY(50px);
+    transition: all 1s ease;
+}
+
+header .overlay .slider .carousel-inner .carousel-item.active .carousel-caption h3, header .overlay .slider .carousel-inner .carousel-item.active .carousel-caption a {
+    transform: translateY(0px);
+}
+
+header .overlay .slider .carousel-inner .carousel-item .carousel-caption a:hover {
+    background-color: #dae413;
+    color: #555555;
+}
+
+header .overlay .slider .carousel-control-prev i, header .overlay .slider .carousel-control-next i {
+    border: 2px solid #ffffff;
+    border-radius: 2px;
+    padding: 30px 20px;
+}
+
+header .overlay .slider .carousel-control-prev {
+    left: 20px;
+}
+
+header .overlay .slider .carousel-control-next {
+    right: 20px;
+}
+
+section.services {
+    padding: 80px 0px;
+}
+
+section.services .title {
+    margin-bottom: 50px;
+}
+
+section.services .title h2 {
+    line-height: 60px;
+    font-size: 40px;
+    color: #070c0c;
+}
+
+section.services .card {
+    background-color: #fff;
+    width: 100%;
+    height: 250px;
+    transition: all 1s ease;
+}
+
+section.services .card:hover {
+    height: 350px;
+}
+
+section.services .card img {
+    width: 140px;
+    height: 140px;
+    margin: 40px auto 0px;
+}
+
+section.services .card .card-block h4 {
+    font-size: 24px;
+    color: #070c0c;
+    line-height: 35px;
+}
+
+section.services .card .card-block p {
+    font-size: 15px;
+    color: #919191;
+    line-height: 20px;
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+section.services .card:hover .card-block p {
+    opacity: 1;
+}
+
+section.gallery .title {
+    margin-bottom: 50px;
+}
+
+section.gallery .title h2 {
+    font-size: 40px;
+    color: #070c0c;
+    line-height: 60px;
+}
+
+section.gallery .work-gallery a {
+    position: relative;
+    display: inline-block;
+    transition: all .5s ease;
+}
+
+section.gallery .work-gallery a .hover {
+    color: #fff;
+    background-color: rgba(43, 175, 199, 0.9);
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+    opacity: 0;
+    transition: all .5s ease;
+}
+
+section.gallery .work-gallery a:hover .hover {
+    opacity: 1;
+}
+
+section.gallery .work-gallery a .hover i {
+    position: absolute;
+    font-size: 2em;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+section.gallery .work-gallery .overlay-gallery {
+    background-color: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    z-index: 1050;
+    text-align: right;
+    padding: 5% 10%;
+    opacity: 0;
+    transition: all 1s ease;
+    margin-top: -100vh;
+}
+
+section.gallery .work-gallery .overlay-gallery:target {
+    opacity: 1;
+    margin-top: 0;
+}
+
+section.gallery .work-gallery .overlay-gallery img {
+    width: 100%;
+}
+
+section.gallery .work-gallery .overlay-gallery .gallery-text h3 {
+    font-size: 36px;
+    line-height: 52px;
+    color: #16aeca;
+    margin-bottom: 30px;
+}
+
+section.gallery .work-gallery .overlay-gallery .gallery-text ul {
+    padding-right: 0;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #efefef;
+    margin-bottom: 20px;
+}
+
+section.gallery .work-gallery .overlay-gallery .gallery-text ul li a {
+    text-decoration: none;
+    color: #555555;
+}
+
+section.gallery .work-gallery .overlay-gallery .gallery-text p {
+    font-size: 24px;
+    line-height: 33px;
+    margin-bottom: 50px;
+    color: #919191;
+}
+
+section.gallery .work-gallery .overlay-gallery .gallery-text a.visit {
+    font-size: 20px;
+    line-height: 50px;
+    border-radius: 25px;
+    padding: 0px 30px;
+    background-color: #16aeca;
+    color: #fff;
+    text-decoration: none;
+}
+
+section.gallery .work-gallery .overlay-gallery .gallery-text {
+    margin-top: 40px;
+}
+
+section.gallery .work-gallery .overlay-gallery a.close {
+    color: #16aeca;
+    position: absolute;
+    font-size: 30px;
+    font-weight: bold;
+    top: 4%;
+    left: 10%;
+}
+
+section.statistics {
+    background-image: url(../images/agency/bg2.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+section.statistics .overlay {
+    background-color: rgba(22, 174, 202, 0.8);
+    padding: 100px 0;
+}
+
+section.statistics .overlay .stat p {
+    font-size: 18px;
+    color: #85ecff;
+    line-height: 22px;
+}
+
+section.statistics .overlay .stat .count {
+    font-size: 40px;
+    color: #ddfaff;
+    font-weight: bold;
+    line-height: 60px;
+}
+
+section.contacts {
+    background-color: #ffffff;
+    padding: 100px
+}
+
+section.contacts .info h3 {
+    font-size: 24px;
+    color: #181c1c;
+    font-weight: bold;
+    line-height: 60px;
+}
+
+section.contacts .info ul {
+    padding: 0;
+}
+
+section.contacts .info ul li {
+    font-size: 18px;
+    color: #16aeca;
+    font-weight: 25px;
+    margin-bottom: 15px;
+}
+
+section.contacts .info ul li i {
+    padding-left: 6px;
+}
+
+section.contacts .form h3 {
+    font-size: 24px;
+    color: #181c1c;
+    line-height: 50px;
+    font-weight: bold;
+    margin: 50px auto 20px;
+}
+
+section.contacts .form form input, section.contacts .form form textarea {
+    background-color: #f7f7f7;
+    color: #5c5c5c;
+    font-size: 15px;
+    font-family: ar-font;
+    line-height: 25px;
+    border: 2px solid #eee;
+    border-radius: 3px;
+}
+
+section.contacts .form form button {
+    background-color: #16aeca;
+    color: #fff;
+    font-size: 15px;
+    line-height: 25px;
+    font-family: ar-font;
+    padding: 10px 25px;
+    border-radius: 3px;
+    border: none;
+    margin-right: 1rem;
+}
+
+section.contacts .cmxform {
+    width: 60%;
+    margin: 0 auto 50px;
+}
+
+section.contacts form .error {
+    color: red;
+}
+
+footer {
+    background-color: #171717;
+    margin-bottom: 0px;
+}
+
+footer .top-footer {
+    padding: 75px 0;
+    text-align: right;
+}
+
+footer .top-footer h3 {
+    font-size: 18px;
+    line-height: 45px;
+    color: #85ecff;
+    margin-bottom: 30px;
+    position: relative;
+    padding-bottom: 3px;
+}
+
+footer .top-footer h3:before {
+    position: absolute;
+    content: "";
+    background-color: #5c5c5c;
+    width: 35px;
+    height: 2px;
+    right: 0;
+    bottom: 0;
+}
+
+footer .top-footer p {
+    color: #919191;
+    font-size: 15px;
+    line-height: 22px;
+    margin-bottom: 50px;
+}
+
+footer .top-footer ul.social {
+    padding: 0;
+}
+
+footer .top-footer ul.social li {
+    margin-right: 5px;
+}
+
+footer .top-footer ul.social li:hover a i {
+    background-color: #16aeca;
+    color: #fff;
+}
+
+footer .top-footer ul.social li a i {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    background-color: #333333;
+    text-align: center;
+    border-radius: 2px;
+    color: #acacac;
+    transition: all 0.5s ease;
+}
+
+footer .top-footer ul.contact-us {
+    padding: 0;
+}
+
+footer .top-footer ul.contact-us li {
+    margin-bottom: 35px;
+    color: #676767;
+    font-size: 18px;
+}
+
+footer .top-footer ul.contact-us li:last-child {
+    margin-bottom: 0;
+}
+
+footer .top-footer ul.contact-us li i {
+    width: 35px;
+    height: 35px;
+    background-color: #282828;
+    color: #acacac;
+    text-align: center;
+    line-height: 35px;
+    margin-left: 20px;
+    border-radius: 2px;
+}
+
+footer .copyright {
+    background-color: #111111;
+}
+
+footer .copyright p {
+    font-size: 15px;
+    color: #919191;
+    line-height: 80px;
+    margin-bottom: 0;
+}
+
+@media(max-width:980px) {
+    header .overlay .slider .carousel-inner .carousel-item .carousel-caption h3 {
+        font-size: 30px;
+    }
+    header .overlay .slider .carousel-inner .carousel-item .carousel-caption {
+        bottom: 23%;
+    }
+    section.services .card {
+        height: 285px;
+        width: 193px;
+    }
+}
+
+@media(max-width:767px) {
+    .navbar {
+        padding: 0.5rem 0;
+    }
+    .navbar-collapse {
+        background-color: #16aeca;
+    }
+    nav.navbar .navbar-brand img {
+        width: 70%;
+    }
+    nav.navbar.noTransparrent .navbar-collapse {
+        background-color: #ffffff;
+    }
+    section.services .card {
+        width: auto;
+        margin-bottom: 25px;
+    }
+    section.services .card .card-block h4 {
+        padding-top: 15px;
+    }
+    section.gallery .work-gallery .overlay-gallery .gallery-text h3 {
+        font-size: 20px;
+        line-height: 35px;
+        margin-bottom: 20px;
+    }
+    section.gallery .work-gallery .overlay-gallery .gallery-text p {
+        font-size: 13px;
+        line-height: 25px;
+        margin-bottom: 40px;
+    }
+    section.gallery .work-gallery .overlay-gallery .gallery-text a.visit {
+        font-size: 14px;
+        line-height: 40px;
+    }
+    section.contacts .cmxform {
+        width: 100%;
+    }
+}
+
+@media(max-width:575px) {
+    header .overlay .slider .carousel-control-prev, header .overlay .slider .carousel-control-next {
+        display: none !important;
+    }
+    .carousel-caption {
+        left: 2%;
+        right: 2%;
+    }
+    section.gallery .work-gallery a {
+        display: block;
+    }
+    .work-gallery .col-md>.col-sm a img {
+        width: 100%;
+    }
+    section.gallery .work-gallery .overlay-gallery .gallery-text a.visit {
+        display: inline-block;
+    }
+    section.gallery .work-gallery .overlay-gallery img {
+        width: 50%;
+    }
+}
